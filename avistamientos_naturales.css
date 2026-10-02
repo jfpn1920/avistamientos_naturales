@@ -1,0 +1,249 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Arial, sans-serif;
+    background: #e8eee8;
+    color: #26352a;
+    min-height: 100vh;
+}
+/*------------------------------------*/
+/*--|estilo_avistamientos_naturales|--*/
+/*------------------------------------*/
+.encabezado {
+    background: #203b2a;
+    color: white;
+    padding: 35px 8%;
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+.icono_encabezado {
+    width: 72px;
+    height: 72px;
+    background: #d69b38;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 29px;
+}
+.etiqueta {
+    color: #e2bd70;
+    font-size: 12px;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+.encabezado h1 {
+    font-size: 34px;
+    margin: 6px 0;
+}
+.encabezado p {
+    color: #c7d3ca;
+}
+/*--------------------------------*/
+/*--|estilo_contenido_principal|--*/
+/*--------------------------------*/
+.contenedor {
+    width: 90%;
+    max-width: 1100px;
+    margin: 35px auto;
+}
+.seccion_formulario {
+    background: white;
+    padding: 28px;
+    border-radius: 14px;
+    border: 1px solid #d2ded4;
+    box-shadow: 0 7px 18px rgba(30, 60, 40, 0.08);
+}
+.titulo_seccion {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 25px;
+}
+.titulo_seccion > i {
+    width: 52px;
+    height: 52px;
+    background: #e8f1e9;
+    color: #31764b;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+}
+.titulo_seccion h2 {
+    margin-bottom: 5px;
+}
+.titulo_seccion p {
+    color: #68746b;
+}
+/*-----------------------------------*/
+/*--|estilo_formulario_de_registro|--*/
+/*-----------------------------------*/
+#formulario_avistamiento {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+.campo {
+    display: flex;
+    flex-direction: column;
+}
+.campo_completo {
+    grid-column: 1 / 3;
+}
+.campo label {
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 7px;
+}
+.campo input, .campo select, .campo textarea {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #ced9d0;
+    border-radius: 7px;
+    background: #f8faf8;
+    outline: none;
+    font-family: Arial, sans-serif;
+}
+.campo input:focus, .campo select:focus, .campo textarea:focus {
+    border-color: #398257;
+}
+.campo textarea {
+    min-height: 105px;
+    resize: vertical;
+}
+.botones_formulario {
+    grid-column: 1 / 3;
+    display: flex;
+    gap: 10px;
+    margin-top: 5px;
+}
+.botones_formulario button, #boton_eliminar_todos {
+    border: none;
+    padding: 12px 16px;
+    border-radius: 7px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.boton_guardar {
+    background: #31764b;
+    color: white;
+}
+.boton_limpiar {
+    background: #6c756e;
+    color: white;
+}
+.botones_formulario button:hover, #boton_eliminar_todos:hover {
+    opacity: 0.85;
+}
+.botones_formulario i, #boton_eliminar_todos i {
+    margin-right: 7px;
+}
+#mensaje_formulario {
+    min-height: 20px;
+    margin-top: 15px;
+    color: #31764b;
+    font-size: 13px;
+}
+/*-------------------------------*/
+/*--|estilo_lista_de_registros|--*/
+/*-------------------------------*/
+.seccion_registros {
+    margin-top: 30px;
+}
+.titulo_registros {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 18px;
+}
+.titulo_registros span {
+    color: #31764b;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+.titulo_registros h2 {
+    margin-top: 5px;
+}
+.contador {
+    background: #ffffff;
+    padding: 12px 18px;
+    border-radius: 8px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    color: #31764b;
+    border: 1px solid #d2ded4;
+}
+.registro {
+    background: white;
+    border-left: 5px solid #d69b38;
+    padding: 20px;
+    margin-bottom: 14px;
+    border-radius: 8px;
+    display: grid;
+    grid-template-columns: 55px 1fr auto;
+    gap: 15px;
+    align-items: center;
+}
+.icono_registro {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #e8f1e9;
+    color: #31764b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+.registro h3 {
+    margin-bottom: 5px;
+}
+.registro p {
+    color: #667269;
+    font-size: 14px;
+    line-height: 1.5;
+}
+.boton_eliminar {
+    border: none;
+    background: #f2dddd;
+    color: #a33d3d;
+    padding: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+#sin_registros {
+    background: white;
+    text-align: center;
+    padding: 35px;
+    border-radius: 10px;
+    color: #768078;
+}
+#sin_registros i {
+    font-size: 30px;
+    color: #8ba58f;
+    margin-bottom: 10px;
+}
+/*---------------------------------*/
+/*--|estilo_accion_eliminar_todo|--*/
+/*---------------------------------*/
+.acciones_generales {
+    text-align: center;
+    margin: 25px 0;
+}
+#boton_eliminar_todos {
+    background: #ad4747;
+    color: white;
+}
+#mensaje_general {
+    min-height: 20px;
+    margin-top: 12px;
+    color: #31764b;
+}

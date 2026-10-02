@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>avistamientos naturales</title>
+    <link rel="stylesheet" href="avistamientos_naturales.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <script src="avistamientos_naturales.js" defer></script>
+</head>
+<body>
+    <!-------------------------------------------->
+    <!--|estructuracion_avistamientos_naturales|-->
+    <!-------------------------------------------->
+    <header class="encabezado">
+        <div class="icono_encabezado">
+            <i class="fa-solid fa-binoculars"></i>
+        </div>
+        <div>
+            <span class="etiqueta">BITÁCORA NATURAL</span>
+            <h1>Avistamientos Naturales</h1>
+            <p>Registra los animales que observes durante tus recorridos.</p>
+        </div>
+    </header>
+    <!---------------------------------------->
+    <!--|estructuracion_contenido_principal|-->
+    <!---------------------------------------->
+    <main class="contenedor">
+        <section class="seccion_formulario">
+            <div class="titulo_seccion">
+                <i class="fa-solid fa-pen-to-square"></i>
+                <div>
+                    <h2>Nuevo avistamiento</h2>
+                    <p>Completa la información del animal observado.</p>
+                </div>
+            </div>
+            <!---------------------------->
+            <!--|formulario_de_registro|-->
+            <!---------------------------->
+            <form id="formulario_avistamiento">
+                <div class="campo">
+                    <label for="nombre_animal">Animal observado</label>
+                    <input type="text" id="nombre_animal" placeholder="Ejemplo: Iguana verde" required>
+                </div>
+                <div class="campo">
+                    <label for="tipo_animal">Tipo de animal</label>
+                    <select id="tipo_animal" required>
+                        <option value="">Selecciona una opción</option>
+                        <option value="Ave">Ave</option>
+                        <option value="Mamífero">Mamífero</option>
+                        <option value="Reptil">Reptil</option>
+                        <option value="Anfibio">Anfibio</option>
+                        <option value="Insecto">Insecto</option>
+                        <option value="Pez">Pez</option>
+                    </select>
+                </div>
+                <div class="campo">
+                    <label for="lugar_avistamiento">Lugar</label>
+                    <input type="text" id="lugar_avistamiento" placeholder="Ejemplo: Parque natural" required>
+                </div>
+                <div class="campo">
+                    <label for="fecha_avistamiento">Fecha</label>
+                    <input type="date" id="fecha_avistamiento" required>
+                </div>
+                <div class="campo campo_completo">
+                    <label for="descripcion_avistamiento">Descripción</label>
+                    <textarea id="descripcion_avistamiento" placeholder="Describe lo que observaste..." required></textarea>
+                </div>
+                <div class="botones_formulario">
+                    <button type="submit" class="boton_guardar"><i class="fa-solid fa-floppy-disk"></i>Guardar avistamiento</button>
+                    <button type="button" id="boton_limpiar" class="boton_limpiar"><i class="fa-solid fa-eraser"></i>Limpiar</button>
+                </div>
+            </form>
+            <p id="mensaje_formulario"></p>
+        </section>
+        <!------------------------>
+        <!--|lista_de_registros|-->
+        <!------------------------>
+        <section class="seccion_registros">
+            <div class="titulo_registros">
+                <div>
+                    <span>REGISTROS</span>
+                    <h2>Mis avistamientos</h2>
+                </div>
+                <div class="contador">
+                    <i class="fa-solid fa-paw"></i>
+                    <strong id="cantidad_registros">0</strong>
+                </div>
+            </div>
+            <div id="lista_avistamientos"></div>
+            <div id="sin_registros">
+                <i class="fa-solid fa-leaf"></i>
+                <p>Aún no tienes avistamientos registrados.</p>
+            </div>
+        </section>
+        <!-------------------------->
+        <!--|accion_eliminar_todo|-->
+        <!-------------------------->
+        <section class="acciones_generales">
+            <button id="boton_eliminar_todos"><i class="fa-solid fa-trash"></i>Eliminar todos</button>
+            <p id="mensaje_general"></p>
+        </section>
+    </main>
+</body>
+</html>
